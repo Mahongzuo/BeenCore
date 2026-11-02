@@ -1,0 +1,14 @@
+{
+  "name": "beencore",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "app": "npm run start -w @been/mobile",
+    "web": "npm run web -w @been/mobile",
+    "api": "npm run dev -w @been/api",
+    "test": "npm test -w @been/core",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": { "node": ">=20" }
+}

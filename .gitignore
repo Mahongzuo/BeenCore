@@ -1,0 +1,17 @@
+node_modules/
+.expo/
+dist/
+web-build/
+.wrangler/
+.dev.vars
+.env
+*.log
+.DS_Store
+apps/mobile/ios/
+apps/mobile/android/
+apps/mobile/expo-env.d.ts
+.env.local
+.npmrc
+*.tgz
+_to_delete/
+*.tsbuildinfo

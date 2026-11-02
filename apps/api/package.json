@@ -1,0 +1,24 @@
+{
+  "name": "@been/api",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply been --local",
+    "db:migrate:remote": "wrangler d1 migrations apply been --remote",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@been/core": "*",
+    "hono": "^4.13.14",
+    "jose": "^6.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "~6.0.3",
+    "wrangler": "^4.156.0"
+  }
+}

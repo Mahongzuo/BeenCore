@@ -1,0 +1,25 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "been-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "been",
+      // 运行 `npx wrangler d1 create been` 后把得到的 id 填在这里
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "been-media" }],
+  "vars": {
+    // 逗号分隔：iOS / Android / Web 三个 OAuth 客户端 id
+    "GOOGLE_CLIENT_IDS": "",
+    // 逗号分隔：iOS bundle id 与 Web 的 Services ID
+    "APPLE_AUDIENCES": "",
+    // 本地开发时允许 `Authorization: Dev <userId>`，生产环境必须为 "0"
+    "DEV_AUTH": "0"
+  }
+  // 密钥：npx wrangler secret put SESSION_SECRET
+}

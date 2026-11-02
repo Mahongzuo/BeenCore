@@ -1,0 +1,6 @@
+# 统一用 LF，Windows 上也一样
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ttf binary
+*.wasm binary
